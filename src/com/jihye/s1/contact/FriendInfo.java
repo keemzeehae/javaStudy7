@@ -1,6 +1,7 @@
 package com.jihye.s1.contact;
 
-import java.util.ArrayList;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class FriendInfo {
@@ -11,7 +12,22 @@ public class FriendInfo {
 		sc= new Scanner(System.in);
 	}
 	
-	public FriendDTO search(ArrayList<FriendDTO> ar) {
+	public FriendDTO remove(List<FriendDTO> ar) {
+		
+		System.out.println("삭제할 이름을 입력하세요");
+		String friend = sc.next();
+		FriendDTO friendDTO = null;
+		for (int i=0;i<ar.size();i++) {
+			if(friend.equals(ar.get(i).getName())) {
+				friendDTO = ar.remove(i);
+				break;
+			}
+		}return friendDTO;
+	
+		
+	}
+	
+	public FriendDTO search(List<FriendDTO> ar) {
 		System.out.println("검색할 이름을 입력하세요");
 		String friend = sc.next();
 		FriendDTO friendDTO = null;
@@ -19,6 +35,7 @@ public class FriendInfo {
 			if (friend.equals(ar.get(i).getName())) {
 				friendDTO = ar.get(i);
 				
+				break;
 			}
 				
 		}return friendDTO;

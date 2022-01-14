@@ -9,10 +9,10 @@ public class FriendController {
 	public void choose() {
 
 		Scanner sc = new Scanner(System.in);
-		boolean check = true;
 		FriendInfo friendInfo = new FriendInfo();
 		FriendView friendView = new FriendView();
 		ArrayList<FriendDTO> ar = new ArrayList<>();
+		boolean check = true;
 		while (check) {
 			System.out.println("1. 전체 출력");
 			System.out.println("2. 사람 검색");
@@ -41,6 +41,13 @@ public class FriendController {
 				System.out.println(ar);
 			} else if (choose == 4) {
 				System.out.println("4번 명단삭제 선택");
+				friendInfo.remove(ar);
+				if (ar != null ) {
+					System.out.println("삭제성공!");
+				}else {
+					System.out.println("저장되어 있지 않은 이름입니다");
+				}
+				
 			} else {
 				System.out.println("Finish");
 				break;
