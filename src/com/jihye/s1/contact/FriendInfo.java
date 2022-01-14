@@ -10,7 +10,7 @@ public class FriendInfo {
 	public FriendInfo() {
 		sc= new Scanner(System.in);
 	}
-	FriendDTO friendDTO = new FriendDTO();
+	
 	public FriendDTO search(ArrayList<FriendDTO> ar) {
 		System.out.println("검색할 이름을 입력하세요");
 		String friend = sc.next();
@@ -25,6 +25,7 @@ public class FriendInfo {
 	}
 	
 	public FriendDTO addFriend(){
+		FriendDTO friendDTO = new FriendDTO();
 		System.out.println("이름");
 		friendDTO.setName(sc.next()); 
 		System.out.println("메모");
