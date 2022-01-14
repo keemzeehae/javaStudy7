@@ -16,10 +16,14 @@ public class FriendInfo {
 		
 		System.out.println("삭제할 이름을 입력하세요");
 		String friend = sc.next();
+		
+		boolean result = false;
 		FriendDTO friendDTO = null;
 		for (int i=0;i<ar.size();i++) {
 			if(friend.equals(ar.get(i).getName())) {
-				friendDTO = ar.remove(i);
+				friendDTO = ar.get(i);
+//				result = ar.remove(ar.get(i)); -> 방법2
+//				friendDTO = ar.remove(i); -> 방법1
 				break;
 			}
 		}return friendDTO;
