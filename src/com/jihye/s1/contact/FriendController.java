@@ -41,6 +41,13 @@ public class FriendController {
 				System.out.println(ar);
 			} else if (choose == 4) {
 				System.out.println("4번 명단삭제 선택");
+				friendInfo.remove(ar);
+				if (ar != null ) {
+					System.out.println("삭제성공!");
+				}else {
+					System.out.println("저장되어 있지 않은 이름입니다");
+				}
+				
 			} else {
 				System.out.println("Finish");
 				break;
