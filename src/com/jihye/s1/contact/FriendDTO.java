@@ -1,5 +1,7 @@
 package com.jihye.s1.contact;
 
+import java.util.Calendar;
+
 public class FriendDTO {
 	
 	
@@ -7,7 +9,7 @@ public class FriendDTO {
 	private String memo;
 	private String email;
 	private int number;
-	private String birth;
+	private Calendar birth;
 	
 	
 	public String getName() {
@@ -34,12 +36,13 @@ public class FriendDTO {
 	public void setNumber(int number) {
 		this.number = number;
 	}
-	public String getBirth() {
+	public Calendar getBirth() {
 		return birth;
 	}
-	public void setBirth(String birth) {
+	public void setBirth(Calendar birth) {
 		this.birth = birth;
 	}
+	
 	
 	
 }

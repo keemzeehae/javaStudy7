@@ -1,6 +1,7 @@
 package com.jihye.s1.contact;
 
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class FriendView {
@@ -37,6 +38,7 @@ public class FriendView {
 		System.out.println("생일: "+friendDTO.getBirth());
 		System.out.println("=================================");
 	}
+	
 	
 	
 	

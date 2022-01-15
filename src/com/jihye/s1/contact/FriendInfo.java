@@ -1,6 +1,8 @@
 package com.jihye.s1.contact;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
@@ -56,8 +58,16 @@ public class FriendInfo {
 		System.out.println("010제외한 전화번호");
 		friendDTO.setNumber(sc.nextInt());
 		System.out.println("생일");
-		friendDTO.setBirth(sc.next());
+		String s = sc.next();//20001224
+		int year=Integer.parseInt(s.substring(0,4));
+		int month = Integer.parseInt(s.substring(4,6));
+		int date = Integer.parseInt(s.substring(6)); //끝까지 가져오니까 
 		
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(year,month-1, date,0,0,0);
+		friendDTO.setBirth(calendar);
+		
+	
 		return friendDTO;
 	}
 
